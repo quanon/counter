@@ -1,11 +1,13 @@
 <template>
   <div class="ui card">
     <div class="center aligned content">
-      <div class="ui right floated dropdown">
-        <i class="ellipsis vertical grey icon"></i>
-        <div class="menu">
-          <div class="item" @click="onClickReset">リセット</div>
-          <div class="item" @click="onClickDelete">削除</div>
+      <div class="right floated">
+        <div class="ui pointing dropdown top right">
+          <i class="ellipsis vertical grey icon"></i>
+          <div class="menu">
+            <div class="item" @click="onClickReset">リセット</div>
+            <div class="item" @click="onClickDelete">削除</div>
+          </div>
         </div>
       </div>
       <div class="header">
