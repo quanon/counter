@@ -58,7 +58,10 @@ module.exports = {
     '~assets/stylesheets/main.scss'
   ],
   router: {
-    // https://github.com/nuxt/nuxt.js/issues/1052
+    /*
+     * nuxt/nuxt.js » Issue #1052 » Add publicPath type of option to generate
+     * https://github.com/nuxt/nuxt.js/issues/1052
+     */
     base: process.env.NODE_ENV === 'dev' ? '/' : '/counter/'
   },
   modules: [
@@ -67,5 +70,10 @@ module.exports = {
   manifest: {
     name: 'counter',
     lang: 'ja'
-  }
+  },
+  /*
+   * robinvdvleuten/vuex-persistedstate » Issue #54 » vuex-persistedstate with Nuxtjs
+   * https://github.com/robinvdvleuten/vuex-persistedstate/issues/54
+   */
+  plugins: [{ src: '~/plugins/localStorage.js', ssr: false }]
 };
