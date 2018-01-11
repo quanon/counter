@@ -1,17 +1,14 @@
 <template>
-  <div class="ui card">
+  <div class="ui card" :class="counter.color">
     <div class="center aligned content">
-      <div class="right floated">
-        <div class="ui pointing dropdown top right">
-          <i class="ellipsis vertical grey icon"></i>
-          <div class="menu">
-            <div class="item" @click="onClickReset">リセット</div>
-            <div class="item" @click="onClickDelete">削除</div>
-          </div>
+      <div class="ui pointing dropdown top right">
+        <i class="ellipsis vertical grey icon"></i>
+        <div class="menu">
+          <div class="item" @click="onClickReset">リセット</div>
+          <div class="item" @click="onClickDelete">削除</div>
         </div>
       </div>
       <div class="header">
-        <img class="ui avatar image" :src='src'>
         {{ counter.title }}
       </div>
       <div class="description">
@@ -37,7 +34,6 @@
 
 <script>
 import $ from 'jquery';
-import emojione from 'emojione';
 
 export default {
   props: {
@@ -61,16 +57,18 @@ export default {
     onClickDelete() {
       this.$store.dispatch('removeCounter', { title: this.counter.title });
     }
-  },
-  computed: {
-    src() {
-      return emojione.toImage(this.counter.emoji).match(/src="([^"]+)"/)[1];
-    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.ui.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 14px;
+}
+
 .extra.content {
   padding: 0 !important;
 }

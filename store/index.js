@@ -21,11 +21,11 @@ const store = () => new Vuex.Store({
       const counter = findCounterByTitle(state.counters, title);
       counter.count = 0;
     },
-    addCounter(state, { title, emoji }) {
+    addCounter(state, { title, color }) {
       state.counters = [...state.counters, {
         title,
-        count: 0,
-        emoji
+        color,
+        count: 0
       }];
     },
     removeCounter(state, { title }) {

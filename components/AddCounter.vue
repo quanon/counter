@@ -3,10 +3,10 @@
     <div class="center aligned content">
       <div class="ui form">
         <div class="field">
-          <EmojiDropdown @change="onChangeEmoji"/>
+          <input type="text" placeholder="タイトル" v-model="title">
         </div>
         <div class="field">
-          <input type="text" placeholder="タイトル" v-model="title">
+          <ColorDropdown @change="onChangeColor"/>
         </div>
       </div>
     </div>
@@ -21,30 +21,30 @@
 </template>
 
 <script>
-import EmojiDropdown from '~/components/EmojiDropdown.vue';
+import ColorDropdown from '~/components/ColorDropdown.vue';
 
 export default {
   data() {
     return {
-      emoji: null,
-      title: null
+      title: null,
+      color: null
     };
   },
   components: {
-    EmojiDropdown
+    ColorDropdown
   },
   methods: {
-    onChangeEmoji(value) {
-      this.emoji = value;
+    onChangeColor(value) {
+      this.color = value;
     },
     onClickAdd() {
-      if (!this.emoji) return;
       if (!this.title) return;
+      if (!this.color) return;
       if (this.$store.getters.exist(this.title)) return;
 
       this.$store.dispatch('addCounter', {
-        emoji: this.emoji,
-        title: this.title
+        title: this.title,
+        color: this.color
       });
 
       this.title = null;
