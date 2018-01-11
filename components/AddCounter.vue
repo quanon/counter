@@ -54,4 +54,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.ui.basic.button {
+  box-shadow: none !important;
+
+  &:active, &:hover, &:focus {
+    background: transparent none !important;
+  }
+}
 </style>

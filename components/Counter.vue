@@ -19,14 +19,12 @@
         </div>
       </div>
     </div>
-    <div class="extra content">
-      <div class="ui two buttons">
-        <div class="ui basic button" @click="onClickMinus">
-          <i class="minus big icon"></i>
-        </div>
-        <div class="ui basic button" @click="onClickPlus">
-          <i class="plus big icon"></i>
-        </div>
+    <div class="ui bottom attached icon buttons">
+      <div class="ui basic button" @click="onClickMinus">
+        <i class="minus big icon"></i>
+      </div>
+      <div class="ui basic button" @click="onClickPlus">
+        <i class="plus big icon"></i>
       </div>
     </div>
   </div>
@@ -71,5 +69,13 @@ export default {
 
 .extra.content {
   padding: 0 !important;
+}
+
+.ui.basic.button {
+  box-shadow: none !important;
+
+  &:active, &:hover, &:focus {
+    background: transparent none !important;
+  }
 }
 </style>
