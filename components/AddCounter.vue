@@ -3,7 +3,7 @@
     <div class="center aligned content">
       <div class="ui form">
         <div class="field">
-          <input type="text" placeholder="タイトル" v-model="title">
+          <input type="text" placeholder="Title" v-model="title">
         </div>
         <div class="field">
           <ColorDropdown @change="onChangeColor"/>
@@ -13,7 +13,7 @@
     <div class="center aligned extra content">
       <div class="ui one buttons">
         <div class="ui basic button" @click="onClickAdd">
-          追加
+          Add
         </div>
       </div>
     </div>

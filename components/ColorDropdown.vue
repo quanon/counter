@@ -2,7 +2,7 @@
   <div class="ui selection labeled icon dropdown">
     <input type="hidden" name="color" @change="onChange($event.target.value)">
     <i class="dropdown icon"></i>
-    <div class="default text">色</div>
+    <div class="default text">Color</div>
     <div class="menu">
       <div class="item" v-for="color in colors" :data-value="color.value">
         <div class="ui empty circular label" :class="color.value"></div>
@@ -27,19 +27,19 @@ export default {
   computed: {
     colors() {
       return [
-        { name: 'レッド', value: 'red' },
-        { name: 'オレンジ', value: 'orange' },
-        { name: 'イエロー', value: 'yellow' },
-        { name: 'オリーブ', value: 'olive' },
-        { name: 'グリーン', value: 'green' },
-        { name: 'ティール', value: 'teal' },
-        { name: 'ブルー', value: 'blue' },
-        { name: 'バイオレット', value: 'violet' },
-        { name: 'パープル', value: 'purple' },
-        { name: 'ピンク', value: 'pink' },
-        { name: 'ブラウン', value: 'brown' },
-        { name: 'グレー', value: 'grey' },
-        { name: 'ブラック', value: 'black' }
+        { name: 'Red', value: 'red' },
+        { name: 'Orange', value: 'orange' },
+        { name: 'Yellow', value: 'yellow' },
+        { name: 'Olive', value: 'olive' },
+        { name: 'Green', value: 'green' },
+        { name: 'Teal', value: 'teal' },
+        { name: 'Blue', value: 'blue' },
+        { name: 'Violet', value: 'violet' },
+        { name: 'Purple', value: 'purple' },
+        { name: 'Pink', value: 'pink' },
+        { name: 'Brown', value: 'brown' },
+        { name: 'Grey', value: 'grey' },
+        { name: 'Black', value: 'black' }
       ];
     }
   },

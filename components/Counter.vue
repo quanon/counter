@@ -4,8 +4,8 @@
       <div class="ui pointing dropdown top right">
         <i class="ellipsis vertical grey icon"></i>
         <div class="menu">
-          <div class="item" @click="onClickReset">リセット</div>
-          <div class="item" @click="onClickDelete">削除</div>
+          <div class="item" @click="onClickReset">Reset</div>
+          <div class="item" @click="onClickDelete">Delete</div>
         </div>
       </div>
       <div class="header">
