@@ -2,6 +2,8 @@
   <div class="ui container">
     <div class="ui four doubling stackable cards">
       <Counter v-for="counter in counters" :key="counter.title" :counter="counter"/>
+    </div>
+    <div class="ui four doubling stackable cards">
       <AddCounter/>
     </div>
   </div>
