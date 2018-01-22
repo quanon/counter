@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
@@ -40,6 +41,9 @@ module.exports = {
         loaders: ['json-loader', 'yaml-loader'],
         exclude: /(node_modules)/
       });
+      // eslint-disable-next-line no-param-reassign
+      config.resolve.alias['../../theme.config$'] =
+        path.join(__dirname, 'semantic-ui-theme/theme.config');
     },
     vendor: ['jquery', 'semantic-ui-css'],
     plugins: [
@@ -55,7 +59,7 @@ module.exports = {
     'semantic-ui-css/semantic.min.js'
   ],
   css: [
-    'semantic-ui-css/semantic.min.css',
+    'semantic-ui-less/semantic.less',
     '~assets/stylesheets/main.scss'
   ],
   router: {
